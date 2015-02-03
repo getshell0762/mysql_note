@@ -1,0 +1,8 @@
+备份
+1，进入Mysql安装的bin目录，运行一下命令:
+   mysqldump  -u用户名 -p databasename > exportfilename
+还原
+  方法1: mysqldump -u root -p voice>voice.sql
+  方法2: mysql -u用户名 -p 
+	 转变数据库
+	 source 文件路径
