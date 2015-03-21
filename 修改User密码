@@ -1,0 +1,10 @@
+# mysql -u root mysql
+mysql>use mysql;
+mysql>desc user;
+mysql> GRANT ALL PRIVILEGES ON *.* TO root@"%" IDENTIFIED BY "root";　　//为root添加远程连接的能力。
+mysql>update user set Password = password('xxxxxx') where User='root';
+mysql>select Host,User,Password  from user where User='root'; 
+mysql>flush privileges;
+mysql>exit
+
+重新登录：mysql -u root -p
